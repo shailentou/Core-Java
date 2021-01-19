@@ -21,16 +21,18 @@ public class WorkerPool {
 	        Thread monitorThread = new Thread(monitor);
 	        monitorThread.start();
 	        //submit work to the thread pool
+	        /*
 	        for(int i=0; i<10; i++){
 	            executorPool.execute(new WorkerThread("cmd"+i));
 	        }
-	        
+	        */
 	        Thread.sleep(30000);
 	        //shut down the pool
-	        executorPool.shutdown();
+	      //  executorPool.shutdown();
 	        //shut down the monitor thread
 	        Thread.sleep(5000);
 	        monitor.shutdown();
+	        System.out.println(String.format("shutting down %s", "rest"));
 	        
 	    }
 }
