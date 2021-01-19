@@ -11,6 +11,7 @@ public class WorkerThread implements Runnable {
 
 	private void processCommand() {
 		try {
+			System.out.println(Thread.currentThread().getName() + " Processing Command = " + command);
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
